@@ -1,0 +1,524 @@
+/* 
+
+couleurs:
+
+Gris foncé #506a85
+Gris très foncé (bas du footer) : #283645
+Vert : #00bc9c
+Gris moyen : #73879c
+Gris clair : #f2f5f7 
+
+pour lesa apliquer:  var(--error-color);
+
+layout: 
+largeur max du container 1200px;
+
+utiliser flexbox 
+
+*/
+
+:root {
+    --gris-fonce: #506a85;
+    --vert: #00bc9c;
+    --gris-moyen: #73879c;
+    --gris-clair:  #f2f5f7 ;
+  }
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+      max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+ /*  nav {
+     background-color: var(--gris-clair);
+     padding: 15px;
+     position: sticky;
+      top: 0;
+      font-size: 20px;
+      display: flex;
+  }  */
+/* pre-nav styling */
+
+.pre-nav {
+    background-color: var(--gris-clair);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+}
+
+.email-phone {
+    padding: 14px;
+    font-size: 13px;
+    margin-left: 27%;
+}
+
+.email-phone a {
+    padding: 10px;
+}
+
+.icons-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-right: 23%;
+}
+
+.icons-list li {
+    padding: 10px;
+    margin-top: -10px;
+}
+
+
+
+
+/* styling for the nav  */ 
+
+.first-logo {
+    height: 31px;
+    width: auto;
+    padding: 2px;
+    margin-left: 25px;
+}
+
+.search-icon {
+    margin-left: 40px;
+    font-size: 1em;
+}
+  nav {
+      font-size: 14px;
+      color: var(--gris-fonce);
+        font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1em;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  width: 1200px;
+  margin-left: 20%;
+  height: 90px;
+  
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.nav-bar, li {
+    padding: 6px;
+}
+.nav-bar, li, a {
+    text-decoration: none;
+    color: var(--gris-fonce);
+    font-weight: bold;
+}
+/*  welcome image styling */
+
+.container {
+    width: 100%;
+}
+
+.get-started {
+    background-image: url("images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 80vh;
+    position: relative;
+    text-align: center;
+
+}
+
+.main-title {
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+    right: 10%;
+    top: 30%;
+    color: white;
+}
+
+.designers-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.designers-text {
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.designers-button {
+    padding: 10px 30px 10px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--vert);
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.designers-button:hover {opacity: 0.9;
+border-radius: 10px;}
+
+.introduction {
+    width: 100%;
+}
+
+.header1 {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    color: var(--gris-fonce);
+}
+
+/*  styling for first grid menu */
+
+
+.statements {
+    display:flex;
+    width: 1200px;
+    margin-left: 22%;
+  }
+
+  .content {
+      text-align: justify;
+      white-space: nowrap;
+
+  }
+
+
+  .sidebar {
+          grid-area: sidebar;
+      }
+  
+      .content {
+          grid-area: content;
+      }
+  
+      .header3 {
+          grid-area: header;
+      }
+  
+  
+      .wrapper {
+          display: grid;
+          grid-gap: 2px;
+        width: fit-content;
+          grid-template-columns: 23%  33%  33%;
+          grid-template-areas:
+                 "sidebar header  header"
+                 "....... content content";
+      }
+        .box {
+            color: var(--gris-moyen);
+            padding: 20px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .header3 {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .content {
+            font-size: 12px;
+            margin-top: -10px;
+        }
+
+/*  works styling section */
+
+.works {
+    background-color: var(--gris-clair);
+    height: 1200px;
+    width: 100%;
+}
+
+.title-works, .text-works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-works {
+    padding-top: 120px;
+    color: var(--gris-moyen);
+    font-size: 40px;
+}
+.text-works {
+    color: var(--gris-moyen);
+    font-size: 1rem;
+    margin-top: -20px;
+}
+
+.polaroid-duo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.polaroid-img {
+    margin: 0;
+    height: 400px;
+    width: 550px;
+    margin-top: 50px;
+}
+
+.polaroid-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        background: white;
+        margin-top: -4px;
+        color: var(--gris-moyen);
+} 
+
+.polaroid-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.polaroid-text p {
+    margin-top: -10px;
+    font-size: 13px;
+}
+
+
+.workswrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 64%;
+    margin-left: 18%;
+    margin-top: 50px;
+}
+
+.dots {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  margin-left:48%; 
+  margin-top: 20px;
+  width:80px;
+  height:30px;
+  border:none; 
+  padding:5px
+
+}
+
+#center-dot {
+    color: var(--vert);
+}
+   
+
+.invitation {
+    width: 100%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    text-align: center;
+    margin-top: 80px;
+    height: 30vh;
+}
+
+.invitation h2 {
+    font-size: 40px;
+    color: var(--gris-fonce);
+    font-weight: bold;
+}
+
+.invitation p {
+    color: var(--gris-fonce);
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.invitation button {
+    background-color: var(--vert);
+    padding: 17px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    
+}
+
+button:hover {
+    opacity: 0.9;
+        border-radius: 30px;}
+
+.invitation button a {
+    color: white; 
+}
+
+
+/* info styling section  section tres difficile  */
+
+.info {
+    width: 100%;
+    height: 30vh;
+    background-color: var(--gris-fonce);
+    margin: 0;
+}
+
+.text-info {
+    align-items: center;
+    font-size: 13px;
+    height: 100%;
+    width: 1250px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin: 0;
+    margin-left: 15%;
+    text-align: left;
+
+}
+
+.text-info li {
+        color: white;
+        list-style-type: none;
+        flex-grow: 0;
+    flex-basis: 25%;
+    padding: 20px;
+        
+}
+
+.text-info h4 {
+    font-size: 18px;
+}
+
+.little-contact i {
+    margin-right: 10px;
+}
+.info-logo {
+        height: 1.7em;
+}
+
+.images img{
+    height: 80px;
+    width: 127px;
+
+}
+
+.images {
+    width: 270px;
+    display: grid;
+    grid-template-columns: auto auto;
+  grid-gap: 3px;
+  padding:10px ;
+  margin-top: -15px;
+}
+
+.more-about {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.email-form {
+    position: relative;
+    width: 265px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(141, 128, 128, 0.185);
+    padding-bottom: 10px;
+}
+
+.email-form .subscribe{
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 100px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    background: var(--vert);
+    border-radius: 6px;
+    padding: 9px 0 24px 0;
+    cursor: pointer;
+}
+ 
+#email-last {
+    position: absolute;
+    top: 13px;
+    background-color: rgba(141, 128, 128, 0);
+    border: none;
+    left: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(250, 246, 246, 0.596);
+    opacity: 1; /* Firefox */
+  }
+.more-about a {
+    color: white;
+}
+
+
+.last-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.last-nav ul {
+    display:flex;
+    justify-content: space-evenly;
+}
+.chosen-one {
+    list-style-type: none;
+}
+.last-nav ul li {
+    padding: 30px 20px 40px 0px;
+    margin-right: 9px;
+}
+        @media screen and (max-width: 900px) {
+            .portfolio {
+                margin-top: 20px;
+             display: flex;
+             flex-direction: column ;
+            }
+          }
+
+          @media screen and (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                z-index: 2;
+                width: 320px;
+                height: 100px;
+            }
+
+            .header1 {
+                font-size: .8em;
+                padding: 10px;
+            }
+          }

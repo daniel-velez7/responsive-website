@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            color:red; 
+            height: 30px;
+            width: 180px;
+
+        }
+
+        .mesDiv {
+            float: center;
+            background-color:blue;
+            margin: 20px;
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="mesDiv"></div>
+  <div class="mesDiv"></div>
+  <div class="mesDiv"></div>
+  <div class="mesDiv"></div>
+  <div class="mesDiv"></div> </br>
+<div>
+  <button id="btn">click to change the size!</button>
+</div>
+   <script>
+
+
+
+const mesDiv = document.querySelectorAll('.mesDiv')
+        const monBouton = document.querySelector('#monBouton')
+
+        function randomNumber(min, max){
+            const r = Math.random()*(max-min) + min
+            return Math.floor(r)
+        }
+
+        monBouton.addEventListener('click', function(){ 
+            mesDiv.forEach(function(maDiv){
+                maDiv.style.width = randomNumber(20, 70) + 'px'
+                maDiv.style.height = randomNumber(20, 70) + 'px'
+            })
+        })
+
+// const mesDiv = document.querySelectorAll('.mesDiv')
+
+// console.log(mesDiv)
+
+// mesDiv.forEach(function(maDiv) {
+//     maDiv.style.background = increaseSize()
+// })
+
+// function increaseSize (){
+//     mesDiv.style.height = "200px";
+// }
+
+// this allows to access the button 
+
+// let btn = document.querySelector('#btn')
+
+// btn.addEventListener('click', function(){
+//     console.log('Click')
+// })
+
+// btn.style.color = 'blue'
+
+
+
+// function getRandomColor() {
+//   var letters = '0123456789ABCDEF';
+//   var color = '#';
+//   for (var i = 0; i < 6; i++) {
+//     color += letters[Math.floor(Math.random() * 16)];
+//   }
+//   return color;
+// }
+
+// const mesDiv = document.querySelectorAll('.mesDiv')
+
+// console.log(mesDiv)
+
+
+// mesDiv.forEach(function(maDiv) {
+//     maDiv.style.background = getRandomColor()
+// })
+
+// for(let i = 0; i < mesDiv.length; i++) {
+//     mesDiv[i].style.background = 'red'
+// }
+
+// function getRandomColor() {
+//   var letters = '0123456789ABCDEF';
+//   var color = '#';
+//   for (var i = 0; i < 6; i++) {
+//     color += letters[Math.floor(Math.random() * 16)];
+//   }
+//   return color;
+// }
+
+        
+// const maDiv = document.querySelector('#maDiv')
+
+// maDiv.addEventListener('click', function(){
+//     maDiv.style.background = getRandomColor()
+// })
+
+// function changeHeadingBg(color){
+//         document.getElementById("heading").style.background = color;
+//     }
+
+// let titre = document.querySelector('#titre')
+// let maDiv = document.querySelector('#maDiv')
+
+// titre.addEventListener('click', function(){
+//     console.log('Click')
+// })
+
+
+// titre.style.color = 'purple'
+// maDive.style.background = 'orange'
+
+// let maMarge = 40
+
+// titre.style.marginTop = maMarge + 'px'
+// titre.style.fontsize = 20 + 'px'
+// titre.style.fontFamily = 'sans-serif'
+// titre.syle.fontWeight = 900
+
+
+// let tableau = [
+//             6,
+//             48,
+//             15,
+//             54,
+//             10,
+//             51,
+//             41
+//         ]
+//         //Créer une boucle qui ajouter 10 à chaque valeur
+//         //du tableau
+
+//         for(let i = 0; i < tableau.length; i++){
+//             tableau[i] += 10
+//         }
+
+//         console.log(tableau)
+
+// let etoiles = ''
+// for(let i; i < 10; i++){
+//     let etoiles = ''
+//     etoiles = etoiles + '*'
+
+//     console.log(etoiles)
+// }
+
+// it is possible to add the variable to itself to increment 
+
+// let nombre = 0
+
+// for(let i; i < 10; i++) {
+//     nombre = nombre + 10 
+// }
+
+// let operation = 10 % 4
+
+// console.log(operation)
+        // let monTableau = [
+        //     'valeur',
+        //     45,
+        //     'valeur3',
+        //     45
+        // ]
+
+        // let monNombre = 0
+
+        // for(let i = 0; i < 10; i++){
+        //     console.log(monNombre)
+        // }
+
+    </script>
+</body>
+</html>
